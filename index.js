@@ -18,11 +18,15 @@ function query(db, options) {
         }))
 
     db.on("put", function put(key, value) {
-        queue.push({ type: "put", key: key, value: value })
+        if (start < key && key < end) {
+            queue.push({ type: "put", key: key, value: value })
+        }
     })
 
     db.on("del", function del(key) {
-        queue.push({ type: "del", key: key })
+        if (start < key && key < end) {
+            queue.push({ type: "del", key: key })
+        }
     })
 
     return stream
