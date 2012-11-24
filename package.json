@@ -17,6 +17,8 @@
     "email": "raynos2@gmail.com"
   },
   "dependencies": {
+    "read-stream": "~0.4.8",
+    "write-stream": "~0.4.3"
   },
   "devDependencies": {
     "tap": "~0.3.1"
