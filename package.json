@@ -1,0 +1,33 @@
+{
+  "name": "level-livefeed",
+  "version": "0.1.0",
+  "description": "Live query a range in leveldb",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Raynos/level-livefeed.git",
+  "main": "index",
+  "homepage": "https://github.com/Raynos/level-livefeed",
+  "contributors": [
+    {
+      "name": "Jake Verbaten"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Raynos/level-livefeed/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tap": "~0.3.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/level-livefeed/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "tap --stderr --tap ./test"
+  }
+}
