@@ -1,6 +1,6 @@
 {
   "name": "level-livefeed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Live query a range in leveldb",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
