@@ -1,16 +1,3 @@
-# level-livefeed
-
-Live query a range in leveldb
-
-## Example
-
-You query a range in the database. It will load the range from
-    disk and then also add on anything else you put or del from
-    it.
-
-It's basically a never ending feed like `tail -f`
-
-```js
 var livefeed = require("..")
     , level = require("levelidb")
     , WriteStream = require("write-stream")
@@ -40,26 +27,3 @@ setTimeout(function () {
         , { type: "del", key: "foo:two" }
     ])
 }, 2000)
-```
-
-prints
-
-```
-chunk put foo:one two
-chunk put foo:some key some value
-finished loading from disk
-chunk put foo:some key some value
-chunk del foo:die undefined
-chunk put foo:one two
-chunk del foo:two undefined
-```
-
-## Installation
-
-`npm install level-livefeed`
-
-## Contributors
-
- - Raynos
-
-## MIT Licenced
