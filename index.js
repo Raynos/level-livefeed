@@ -1,6 +1,5 @@
 var ReadStream = require("read-stream")
     , WriteStream = require("write-stream")
-    , wrap = require("streams2")
 
 module.exports = query
 
@@ -12,7 +11,7 @@ function query(db, options) {
         , start = options.start
         , end = options.end
         , writer = WriteStream(write, loaded)
-        , reader = wrap(db.readStream(options))
+        , reader = db.readStream(options)
 
     reader.pipe(writer)
 
